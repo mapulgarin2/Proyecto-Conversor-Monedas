@@ -9,8 +9,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class ConversorMoneda {
-    public Moneda ConversorMoneda(String opcion){
+public class ApiCliente {
+    public Moneda LlamadaApiCliente(String opcion){
         URI url = URI.create("https://v6.exchangerate-api.com/v6/11a51c75c5905f07c1e159f3/latest/" + opcion);
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()

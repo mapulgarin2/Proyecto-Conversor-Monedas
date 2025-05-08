@@ -6,63 +6,87 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ConversorMoneda convertir = new ConversorMoneda();
+        ApiCliente apiCliente = new ApiCliente();
         Scanner scanner = new Scanner(System.in);
-        Moneda moneda = convertir.ConversorMoneda("USD");
+        Moneda moneda = apiCliente.LlamadaApiCliente("USD");
 
 
         while (true) {
-            System.out.println("***************************************");
-            System.out.println("Sea bienvenido al conversor de monedas =]\n" +
-                    "1) Dólar =>> Peso argentino\n" +
-                    "2) Peso Argentino =>> Dólar\n" +
-                    "3) Dólar =>> Real brasileño\n" +
-                    "4) Real brasileño =>> Dólar\n" +
-                    "5) Dólar =>> Peso colombiano\n" +
-                    "6) Peso colombiano =>> Dólar\n" +
-                    "7) Salir\n" +
+            System.out.println("""
+                    *********************************************************        
+                    Sea bienvenido al conversor de monedas =]
+
+                    "1) Dólar =>> Peso argentino
+                    "2) Peso Argentino =>> Dólar
+                    "3) Dólar =>> Real brasileño
+                    "4) Real brasileño =>> Dólar                
+                    "5) Dólar =>> Peso colombiano
+                    "6) Peso colombiano =>> Dólar
+                    "7) Salir
                     "Elija una opción válida");
-            System.out.println("***************************************");
+                    *********************************************************                       
+                    """);
             var opcionUsuario = scanner.nextLine();
             if (opcionUsuario.equals("1") ) {
+                System.out.println("Ingrese la cantidad de dolares que quiere apiCliente a pesos argentinos:");
+                Double dolares = scanner.nextDouble();
+                scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("ARS");
-                System.out.println("La tasa de cambio de argentina es "+tasa);
+                Double conversorDolarPesosArgentinos = dolares * tasa;
+                System.out.printf("EL valor de %.2f [USD] corresponde al valor final  de =>>> %.2f [ARS])",dolares,conversorDolarPesosArgentinos);
+                System.out.println("La tasa de cambio de peso argentino es "+tasa);
                 System.out.println(moneda);
             }else if (opcionUsuario.equals("2")) {
-                Double tasa = moneda.obtenerTasa("USD");//
-                System.out.println("La tasa de cambio de USA es "+tasa);
+                System.out.println("Ingrese la cantidad de pesos argentinos que quiere apiCliente a dolares:");
+                Double pesosArgentinos = scanner.nextDouble();
+                scanner.nextLine();
+                Double tasa = moneda.obtenerTasa("ARS");//
+                Double conversionPesosArgentinoDolar = pesosArgentinos / tasa;
+                System.out.printf("EL valor de %.2f [ARS] corresponde al valor final  de =>>> %.2f [USD])",pesosArgentinos,conversionPesosArgentinoDolar);
+                System.out.println("La tasa de cambio de peso argentino es "+tasa);
                 System.out.println(moneda);
             }else if (opcionUsuario.equals("3")) {
+                System.out.println("Ingrese la cantidad de dolares que quiere apiCliente a reales brasileños:");
+                Double dolares = scanner.nextDouble();
+                scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("BRL");//
-                System.out.println("La tasa de cambio de Brazil es "+tasa);
-//                Moneda moneda = convertir.ConversorMoneda("USD");
+                Double conversorDolarRealesBrasilenos = dolares * tasa;
+                System.out.printf("EL valor de %.2f [USD] corresponde al valor final  de =>>> %.2f [BRL])",dolares,conversorDolarRealesBrasilenos);
+                System.out.println("La tasa de cambio de Brazil es " + tasa);
                 System.out.println(moneda);
             }else if (opcionUsuario.equals("4")) {
-                Double tasa = moneda.obtenerTasa("USD");//
-                System.out.println("La tasa de cambio de USA es "+tasa);
-//                Moneda moneda = convertir.ConversorMoneda("BRL");
+                System.out.println("Ingrese la cantidad de Reales brasileños que quiere apiCliente a Dolares:");
+                Double realesBrasilenos = scanner.nextDouble();
+                scanner.nextLine();
+                Double tasa = moneda.obtenerTasa("BRL");
+                Double conversioRealBrasileno = realesBrasilenos / tasa;
+                System.out.println("La tasa de cambio de real brasileño es "+tasa);
+                System.out.printf("EL valor de %.2f [BRL] corresponde al valor final  de =>>> %.2f [USD])",realesBrasilenos,conversioRealBrasileno);
                 System.out.println(moneda);
             }else if (opcionUsuario.equals("5")) {
-
-
+                System.out.println("Ingrese la cantidad de dolares que quiere apiCliente a pesos colombianos:");
+                Double dolares = scanner.nextDouble();
+                scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("COP");
-                System.out.println("La tasa de cambio de Colombia es "+tasa);
-//                Moneda moneda = convertir.ConversorMoneda("USD");
+                Double conversionDolares = dolares * tasa;
+                System.out.println("La tasa de cambio de pesos colombianos es "+tasa);
+                System.out.printf("EL valor de %.2f [USD] corresponde al valor final  de =>>> %.2f [COP])",dolares,conversionDolares);
                 //System.out.println(moneda);
             }else if (opcionUsuario.equals("6")) {
-                System.out.println("ingese la cantidad de pesos colombianos que quiere convertir  a dolares:");
+                System.out.println("Ingrese la cantidad de pesos colombianos que quiere apiCliente a dolares:");
                 Double pesosColombianos = scanner.nextDouble();
                 scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("COP");//
                 Double conversionPesosColombianos = pesosColombianos / tasa;
                 System.out.printf("EL valor de %.2f [COP] corresponde al valor final  de =>>> %.2f [USD])",pesosColombianos,conversionPesosColombianos);
-                System.out.println("La tasa de cambio de USA es "+tasa);//
+                System.out.println("La tasa de cambio de pesos colombianos es "+tasa);//
                 System.out.println(moneda);
-            } else if (opcionUsuario.equals("salir")) {
+            } else if (opcionUsuario.equals("7") ||  opcionUsuario.equals("salir")) {
                 break;
             } else {
-                System.out.println("Opcion no valida");
+                System.out.println("Opción no valida");
             }
         }
+        System.out.println("Finalización de la ejecución del programa");
     }
 }

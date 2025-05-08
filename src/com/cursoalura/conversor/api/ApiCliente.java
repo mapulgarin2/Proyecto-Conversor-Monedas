@@ -1,4 +1,4 @@
-package com.cursoalura.conversor.main;
+package com.cursoalura.conversor.api;
 
 import com.cursoalura.conversor.model.Moneda;
 import com.google.gson.Gson;

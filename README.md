@@ -33,10 +33,27 @@
 <h3>Pasos para ejecutar:</h3>
 <ul>
   <li>Descargar el archivo donde se encuentra el repositorio base.</li>
-  * 
-  <li>Importar la biblioteca Gson</li>
+  * https://github.com/mapulgarin2/Proyecto-Conversor-Monedas.git
+  <li>Descargar la biblioteca GSON en formato jar</li>
+  *https://mvnrepository.com/artifact/com.google.code.gson/gson/2.13.1
+  <li>Importar la biblioteca Gson al IDE</li>
   <li>API Key de ExchangeRate-API</li>
+  *https://www.exchangerate-api.com/
 </ul>
+<h2>📸 Capturas</h2>
+<h2>🧑‍💻 Autores</h2>
+<sub>Mauricio Pulgarin https://github.com/mapulgarin2 </sub><img src="https://avatars.githubusercontent.com/u/111947748?v=4" width=115><br><sub>Alura Latam https://www.aluracursos.com/ </sub><img src="https://www.aluracursos.com/assets/img/home/alura-logo.1730889068.svg" width=115>
+<h2>🙏 Agradecimientos</h2>
+<ul>
+  <li>A mi familia por apoyarme en cada reto que me propongo.</li> 
+  <li> A mí por mi esfuerzo y dedicación</li>
+  <li>A los instructores de Alura Latam por su excelente formación</li>
+  <li>A la comunidad de Java por sus valiosos recursos</li>
+  <li>A los contribuidores de open source que hacen posible estas herramientas</li>
+</ul>
+
+
+
 
 
 

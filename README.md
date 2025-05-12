@@ -40,12 +40,6 @@
   <li>API Key de ExchangeRate-API</li>
   *https://www.exchangerate-api.com/
 </ul>
-<h2>📸 Capturas</h2>
-![Captura del Conversor de Monedas](https://raw.githubusercontent.com/mapulgarin2/Proyecto-Conversor-Monedas/main/img/Captura%20de%20pantalla%20(14).png)
-![Captura del Conversor de Monedas](img/Captura%20de%20pantalla%20(14).png)
-
-
-
 <h2>🧑‍💻 Autores</h2>
 <sub>Mauricio Pulgarin https://github.com/mapulgarin2 </sub><img src="https://avatars.githubusercontent.com/u/111947748?v=4" width=115><br><sub>Alura Latam https://www.aluracursos.com/ </sub><img src="https://www.aluracursos.com/assets/img/home/alura-logo.1730889068.svg" width=115>
 <h2>🙏 Agradecimientos</h2>

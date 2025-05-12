@@ -37,8 +37,6 @@ public class MenuConversor {
                 Double tasa = moneda.obtenerTasa("ARS");
                 Double conversorDolarPesosArgentinos = dolares * tasa;
                 System.out.printf("EL valor de %.2f [USD] corresponde al valor final  de =>>> %.2f [ARS])",dolares,conversorDolarPesosArgentinos);
-                System.out.println("La tasa de cambio de peso argentino es "+tasa);
-                System.out.println(moneda);
             }else if (opcionUsuario.equals("2")) {
                 System.out.println("Ingrese la cantidad de pesos argentinos que quiere convertir a dolares:");
                 Double pesosArgentinos = scanner.nextDouble();
@@ -46,8 +44,6 @@ public class MenuConversor {
                 Double tasa = moneda.obtenerTasa("ARS");//
                 Double conversionPesosArgentinoDolar = pesosArgentinos / tasa;
                 System.out.printf("EL valor de %.2f [ARS] corresponde al valor final  de =>>> %.2f [USD])",pesosArgentinos,conversionPesosArgentinoDolar);
-                System.out.println("La tasa de cambio de peso argentino es "+tasa);
-                System.out.println(moneda);
             }else if (opcionUsuario.equals("3")) {
                 System.out.println("Ingrese la cantidad de dolares que quiere convertir a reales brasileños:");
                 Double dolares = scanner.nextDouble();
@@ -55,35 +51,27 @@ public class MenuConversor {
                 Double tasa = moneda.obtenerTasa("BRL");//
                 Double conversorDolarRealesBrasilenos = dolares * tasa;
                 System.out.printf("EL valor de %.2f [USD] corresponde al valor final  de =>>> %.2f [BRL])",dolares,conversorDolarRealesBrasilenos);
-                System.out.println("La tasa de cambio de Brazil es " + tasa);
-                System.out.println(moneda);
             }else if (opcionUsuario.equals("4")) {
                 System.out.println("Ingrese la cantidad de Reales brasileños que quiere convertir a Dolares:");
                 Double realesBrasilenos = scanner.nextDouble();
                 scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("BRL");
                 Double conversioRealBrasileno = realesBrasilenos / tasa;
-                System.out.println("La tasa de cambio de real brasileño es "+tasa);
                 System.out.printf("EL valor de %.2f [BRL] corresponde al valor final  de =>>> %.2f [USD])",realesBrasilenos,conversioRealBrasileno);
-                System.out.println(moneda);
             }else if (opcionUsuario.equals("5")) {
                 System.out.println("Ingrese la cantidad de dolares que quiere convertir a pesos colombianos:");
                 Double dolares = scanner.nextDouble();
                 scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("COP");
                 Double conversionDolares = dolares * tasa;
-                System.out.println("La tasa de cambio de pesos colombianos es "+tasa);
                 System.out.printf("EL valor de %.2f [USD] corresponde al valor final  de =>>> %.2f [COP])",dolares,conversionDolares);
-                //System.out.println(moneda);
             }else if (opcionUsuario.equals("6")) {
-                System.out.println("Ingrese la cantidad de pesos colombianos que quiere apiCliente a dolares:");
+                System.out.println("Ingrese la cantidad de pesos colombianos que quiere convertir a dolares:");
                 Double pesosColombianos = scanner.nextDouble();
                 scanner.nextLine();
                 Double tasa = moneda.obtenerTasa("COP");//
                 Double conversionPesosColombianos = pesosColombianos / tasa;
                 System.out.printf("EL valor de %.2f [COP] corresponde al valor final  de =>>> %.2f [USD])",pesosColombianos,conversionPesosColombianos);
-                System.out.println("La tasa de cambio de pesos colombianos es "+tasa);//
-                System.out.println(moneda);
             } else if (opcionUsuario.equals("7") ||  opcionUsuario.equals("salir")) {
                 break;
             } else {
